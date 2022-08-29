@@ -1,0 +1,103 @@
+==============================================================
+git init (initialize Git -> create a repository)
+git add (add a new file in git & to make ready to push in git)
+git status (shows current status of files)
+
+pwd -> print working directory
+ls (show file)
+ls -a (all file with hidden file show)
+cd /C/
+cd Users/
+cd 'N. I. M. Ashafuddula'
+cd Desktop/
+
+clear
+rm dir name (remove Directory)
+rm -r dir name (remove recursively Dir.)
+
+cd .. (Back 1 upper)
+
+git init
+git add --all
+git commit -m "msg" file name (commit file)
+git commit -am "msg" file1 name file2 name (commit all file)
+git commit -am "all2Commit"
+
+
+
+====================================Hosting (Push -Pull)
+[1] <For new Project cmd>
+-> go to website
+-> create a repository
+-> [https / SSH] url Copy. (https://Ashaf_razon@bitbucket.org/Ashaf_razon/testgit.git)
+-> git clone key (will create a blank project)
+-> cd testgit (now we can work here)
+
+[2] <if there is any project on local PC>
+-> goto existing project directory (which is initialized already) cd ../ testGit (folder name)
+git remote add origin (add remote) (name can be any) url (https://Ashaf_razon@bitbucket.org/Ashaf_razon/testgit.git)
+git remote remove origin (remove origin url)
+
+git remote show (who how many remote added <may have many remote>)
+git remote show origin (shows URL)
+git push origin master (push)
+git push origin master -f (push)
+git pull origin master (pull) 
+
+git diff file.txt (what changed)
+git diff myTestGit.txt myTestGit.txt
+git diff *
+
+***UserName (bitbucket username)
+***pass (bitbucket Pass)
+
+->PROBLEM (PUSH) in the case of rejecting & first facing 
+
+git fetch && git checkout master
+
+git fetch origin master
+git merge origin master
+git push origin master
+
+git log (shows log)
+git show key(log) (shows commit with message, we can see every changes)
+
+->Git reset & Amend
+
+git log
+git show (log Key) (The state we want to back)
+git checkout (log Key) (Full project in git in that state)
+git checkout master (back to head/ means back to origin/previous state)
+
+cat filename.txt (shows content of the file)
+
+->only single file to previous state
+git checkout 4b73 (log key) myTestGit.txt (back this filte into that log state)
+git checkout master -f (for only one file back master state)
+
+->RESET
+(Never reset after PUSH to remote)
+[1] Soft reset (remove only that commit, work/ commit after that commit will be remain same as before)
+<Keep changes and back>
+git reset --soft 3833c (Log Key)
+git diff HEAD (see changes)
+
+[2] Hard reset (remove commit after that key & that text and back)
+<clean all changes and back>
+git reset --hard 3833c (Log Key)
+
+git reflog (show what we have done till now)
+git reset HEAD@{0} (back previous HEAD)
+git reset --hard (Back previous head)
+
+-> if ther are 2 files and need to commit both same time but we commited only one file
+so, there we will use Ammend instead of commit.
+
+git commit --amend
+git commit --amend -m "update commit 2 files"
+
+
+
+https://Ashaf_razon@bitbucket.org/Ashaf_razon/animationslide.git
+https://Ashaf_razon@bitbucket.org/Ashaf_razon/animationslider.git
+

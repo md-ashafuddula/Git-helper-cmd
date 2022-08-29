@@ -1,0 +1,111 @@
+|touch file.txt (Create a new file from git bash)
+
+>>Ignore files
+How to ignore files in Git: Create a <.gitignore> file and commit it.
+
+>>Add to stage
+|git add * (staged all files & folders except delete files)
+|git add . (All files & folder in Current directory)
+|git add -A (add all)
+|git add --all (add all)
+|git add -p (This command opens a prompt and asks if you want to stage changes or not
+		, and includes other options.)
+|git status (shows repository status)
+|git reset
+|git status (shows repository status)
+---------------------------------------
+|pwd (present work directory)
+|clear (clear window)
+|cd (change directory) 
+---------------------------------------
+>>commit & roll back
+|git commit -m "Message"
+|git commit --amend (allows you to modify and add changes to the most recent commit)
+		!!Note!!: fixing up a local commit with amend is great and you can push it 
+		to a shared repository after you've fixed it. 
+		But you should avoid amending commits that have already been made public.
+
+|git reset HEAD~
+
+>>Log & history
+|git log (see commit history)
+|git log -p (shows the commit's history including all files and their changes)
+|git log --stat (will cause the Git log to show some statistics about the changes in each commit,
+                including line(s) changed and file names)
+|git log --graph --oneline (show the commit log as a graph in Git, 
+			    --graph to get the commit log to show as a graph. Also,
+			    --oneline will limit commit messages to a single line)
+|git log --graph --oneline --all (How to show the commit log as a graph of 
+				  all branches in Git)
+|git log origin/main (Commit after commit, Git builds up a log. 
+			You can find out the remote repository log)
+
+
+
+>>Show diff
+|git show <commit-id> (shows a specific commit)
+|git diff (shows only unstaged changes by default)
+|git diff --staged (to see any staged changes.)
+
+>>Remove files
+|can manually delete files
+|git reset --hard (back everything with physical files)
+|git rm file.txt (delete & staged)
+|git rm file.txt -f (force delete when files are changed but not added)
+|git rm --cached file.txt (delete file from staged but not from pwd)
+|git rm -r folder (delete files & folder recursively, if folder in folder & folder in folders)
+
+>>Revert commit 
+|git revert (will create a new commit that is the opposite of everything in the given commit)
+|git revert <comit_id_here>
+|git stash                     # remove all changes from HEAD and save them somewhere else
+
+>>Branching
+|git branch (shows all branch)
+|git branch dev (create a new branch named <dev>)
+|git checkout -b <branch_name> (can create and switch to a new branch right away)
+|git checkout dev (switch master branch to dev branch)
+|git push --delete origin <branch_name_here> (If you no longer need a remote branch you can remove it )
+
+
+>>Merge Branch
+|git merge main -m "message" (merge the history of the branch )
+|git merge dev -m "message"
+|git branch -d <branch_name> (When you are done working with a branch and have merged it, 
+				you can delete it)
+|git merge --abort (to abort a conflicting merge in Git)
+|git merge origin/main (f the remote repository has changes you want to merge with your local)
+
+
+>>Reset
+|git reset HEAD filename
+|git reset HEAD -p (use the -p option flag to specify the changes you want to reset)
+
+>>Merge conflict (when 2 or more person change same files in different branch)
+solution: take that file manually choose what to change or not then merge
+
+>>Add remote
+|git add remote <https://repo_here> (adds a remote repository to your local repository )
+|git remote -v (see all remote repositories for your local repository)
+|git remote show origin (to get more info)
+|git pull (If other team members are working on your repository, you 
+	 can retrieve the latest changes made to the remote repository)
+|git pull origin master (pull master branch and merge to current branch)
+|git merge master (Merge master branch to current branch)
+
+|git branch -r (shows the name of all remote branches that Git is tracking
+		 for the current repository)
+|git fetch (download the changes from a remote repo but
+	   will not perform a merge on your local branch)
+|git remote update(This lets you update the remote without merging any 
+		content into the local branches.)
+
+
+>>Push to remote
+|git push -u origin <branch_name> (to push a branch to a remote repository)
+|git push -f (force push)
+
+>>Rebase
+|git rebase <branch_name_here> (transfer completed work from one branch to another)
+			   N. B. Git Rebase can get really messy if you don't do it properly
+|git rebase -i master (You can run git rebase interactively using the -i flag.)
