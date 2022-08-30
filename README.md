@@ -4,7 +4,7 @@
 
 ```git init``` **Initialize Git**
 
-```git add``` **Staged all files** (i.e. staged new files in git & to make ready to push in git repository)
+```git add file-name.txt``` **Staged all files** (i.e. staged new files in git & to make ready to push in git repository)
 
 ```git status``` **View file status** (View current status of files)
 
@@ -23,6 +23,15 @@
 ```cd .. ```**Back 1 upper**
 
 
+  ```git add --all``` **Added all files**
+
+  ```git commit -m "msg" **Commit message to changed files**
+
+  ```git commit -am "msg" file1 name file2 name **Commit message to all file**
+
+  ```git commit -am "all 2 Commit" ``` ***Example***
+  
+  
 
 
 
