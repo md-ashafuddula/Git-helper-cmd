@@ -2,45 +2,27 @@
 [Git doc official](https://git-scm.com/docs)
 [Github doc official](https://docs.github.com/en)
 
-- **Initialize Git**
+```git init``` **Initialize Git**
 
-```git init```
+```git add``` **Staged all files** (i.e. staged new files in git & to make ready to push in git repository)
 
-- **Staged all files** (i.e. staged new files in git & to make ready to push in git repository)
+```git status``` **View file status** (View current status of files)
 
-```git add```
+```pwd``` **Present Work Directory**
 
-- **View file status** (View current status of files)
+```ls```  **Show all files in the directory**
 
-```git status```
+```ls -a``` **Show all files <including hidden> in the directory**
 
-- **Present Work Directory**
+```clear``` **Clear Terminal**
 
-```pwd```
-
-- **Show all files in the directory**
-
-```ls``` 
-
--**Show all files <including hidden> in the directory**
-
-```ls -a```
-
--**Clear Terminal**
-
-  ```clear```
+```rm dir name```  Remove directory
   
--  Remove directory
+```rm -r dir name ``` **Remove recursively directory** 
   
-```rm dir name```
+```cd .. ```**Back 1 upper**
 
--**Remove recursively directory** 
-  
-  ```rm -r dir name ```
 
--**Back 1 upper**
-
-```cd .. ```
 
 
 
