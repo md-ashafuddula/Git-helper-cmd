@@ -2,6 +2,11 @@
 - [Git doc official](https://git-scm.com/docs)
 - [Github doc official](https://docs.github.com/en)
 
+``` git config --global user.name "John Doe"``` ***Git user Config***
+ 
+``` git config --global user.email johndoe@example.com``` ***Git user Config***
+
+
 ```git init``` **Initialize Git**
 
 ```git add file-name.txt``` **Staged all files** (i.e. staged new files in git & to make ready to push in git repository)
@@ -22,14 +27,13 @@
   
 ```cd .. ```**Back 1 upper**
 
+```git add --all``` **Added all files to stage**
 
-  ```git add --all``` **Added all files**
+```git commit -m "msg" **Commit message to changed files**
 
-  ```git commit -m "msg" **Commit message to changed files**
+```git commit -am "msg" file1 name file2 name **Commit message to all file**
 
-  ```git commit -am "msg" file1 name file2 name **Commit message to all file**
-
-  ```git commit -am "all 2 Commit" ``` ***Example***
+```git commit -am "all 2 Commit" ``` ***Example***
   
   
 
