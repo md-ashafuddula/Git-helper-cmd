@@ -2,10 +2,17 @@
 - [Git doc official](https://git-scm.com/docs)
 - [Github doc official](https://docs.github.com/en)
 
+## Git Config
 ``` git config --global user.name "John Doe"``` ***Git user Config***
  
 ``` git config --global user.email johndoe@example.com``` ***Git user Config***
 
+```git config --list``` 
+
+```git config --list --show-origin``` ***to see where that setting is defined (global, user, repo, etc...)***
+
+
+## Git initiation & basics
 
 ```git init``` **Initialize Git**
 
@@ -29,9 +36,9 @@
 
 ```git add --all``` **Added all files to stage**
 
-```git commit -m "msg" **Commit message to changed files**
+```git commit -m "msg"``` **Commit message to changed files**
 
-```git commit -am "msg" file1 name file2 name **Commit message to all file**
+```git commit -am "msg" file1 name file2 name``` **Commit message to all file**
 
 ```git commit -am "all 2 Commit" ``` ***Example***
   
