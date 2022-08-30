@@ -1,6 +1,6 @@
 # Git-helper-cmd
-[Git doc official](https://git-scm.com/docs)
-[Github doc official](https://docs.github.com/en)
+-[Git doc official](https://git-scm.com/docs)
+-[Github doc official](https://docs.github.com/en)
 
 ```git init``` **Initialize Git**
 
@@ -16,7 +16,7 @@
 
 ```clear``` **Clear Terminal**
 
-```rm dir name```  Remove directory
+```rm dir name```  **Remove directory**
   
 ```rm -r dir name ``` **Remove recursively directory** 
   
