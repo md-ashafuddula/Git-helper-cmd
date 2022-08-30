@@ -1,4 +1,5 @@
 # Git-helper-cmd
 
-**Initialize Git**
+- **Initialize Git**
+
 ```git init```
