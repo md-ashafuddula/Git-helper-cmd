@@ -62,6 +62,8 @@ git rebase BranchA
 ```
  
 This **takes BranchB and rebases it onto BranchA**, which effectively looks like BranchB was branched from BranchA, not master.
+ 
+ ``Git pull origin branchName`` **Bring remote changes to local repo**
   
 
 
