@@ -42,6 +42,8 @@
 
 ```git commit -am "all 2 Commit" ``` ***Example***
 
+``git switch`` command to do the same since ``git checkout``
+ 
 **Copy changes from one branch to another**
 I have a branch named **BranchA** from **master**. I have **some changes in BranchA** ***(I am not going to merge changes from BranchA to master).***
 Now I have created another branch from **master** named **BranchB**.
@@ -51,7 +53,15 @@ How can I copy the changes from **BranchA** to **BranchB**?
 git checkout BranchB
 git merge BranchA
 ```
-  
+
+**Instead of merge, as others suggested, you can rebase one branch onto another:**
+
+```
+git checkout BranchB
+git rebase BranchA
+```
+ 
+This **takes BranchB and rebases it onto BranchA**, which effectively looks like BranchB was branched from BranchA, not master.
   
 
 
