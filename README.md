@@ -65,6 +65,27 @@ This **takes BranchB and rebases it onto BranchA**, which effectively looks like
  
  ``Git pull origin branchName`` **Bring remote changes to local repo**
   
+## Ignore files and folder git
+
+[stackoverflow](https://stackoverflow.com/questions/12501324/how-to-use-gitignore-command-in-git)
+
+Some files are *libraries/documentation* you don't want to delete but also don't want to push to github. Let say you have your project in folder your_project and a doc directory: *your_project/doc*
+
+Create git ignore file first-- ``touch .gitignore``
+
+this command to add lines in your gitignore file-- ``echo 'application/cache' >> .gitignore``
+
+And you can exclude a folder by entering the below command in the .gitignore file ``/folderName``
+
+- Remove it from the project directory (without actually deleting it): git rm ``--cached doc/*``
+- If you don't already have a ``.gitignore`` , you can make one right inside of your project folder: ``project/.gitignore`` .
+- Put ``doc/*`` in the ``.gitignore``
+- Stage the file to commit: ``git add project/.gitignore``
+- Commit: ``git commit -m "message"``.
+- Push your change to github.
+
+We can *unignore* certain files in a deeper structure or a specific subset (ie, you ignore ``*.log`` but want to still track ``important.log``) by specifying patterns beginning with ``!.`` eg: ``*.log !important.log``
+
 
 
 
