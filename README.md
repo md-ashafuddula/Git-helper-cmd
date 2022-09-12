@@ -69,7 +69,7 @@ This **takes BranchB and rebases it onto BranchA**, which effectively looks like
 
 [stackoverflow](https://stackoverflow.com/questions/12501324/how-to-use-gitignore-command-in-git)
 
-Some files are *libraries/documentation* you don't want to delete but also don't want to push to github. Let say you have your project in folder your_project and a doc directory: *your_project/doc*
+Some files are **libraries/documentation** you don't want to delete but also don't want to push to github. Let say you have your project in folder your_project and a doc directory: **your_project/doc**
 
 Create git ignore file first-- ``touch .gitignore``
 
@@ -84,7 +84,7 @@ And you can exclude a folder by entering the below command in the .gitignore fil
 - Commit: ``git commit -m "message"``.
 - Push your change to github.
 
-We can *unignore* certain files in a deeper structure or a specific subset (ie, you ignore ``*.log`` but want to still track ``important.log``) by specifying patterns beginning with ``!.`` eg: ``*.log !important.log``
+We can **unignore** certain files in a deeper structure or a specific subset (ie, you ignore ``*.log`` but want to still track ``important.log``) by specifying patterns beginning with ``!.`` eg: ``*.log !important.log``
 
 
 
