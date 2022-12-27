@@ -44,6 +44,12 @@
 
 ``git switch`` command to do the same since ``git checkout``
  
+ ``git push (-u or --set-upstream) origin`` **Allows you to specify the upstream (remote) repository for the branch you're on, so that next time you run git push, you don't even have to specify the remote repository.**
+
+**Next time you push, you don't have to specify the remote repository**
+
+``git push``
+ 
 **Copy changes from one branch to another**
 I have a branch named **BranchA** from **master**. I have **some changes in BranchA** ***(I am not going to merge changes from BranchA to master).***
 Now I have created another branch from **master** named **BranchB**.
