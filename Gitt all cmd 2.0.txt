@@ -85,7 +85,7 @@ How to ignore files in Git: Create a <.gitignore> file and commit it.
 solution: take that file manually choose what to change or not then merge
 
 >>Add remote
-|git add remote <https://repo_here> (adds a remote repository to your local repository )
+|git remote add origin (add remote) (name can be any) url (https://Ashaf_razon@bitbucket.org/Ashaf_razon/testgit.git)
 |git remote -v (see all remote repositories for your local repository)
 |git remote show origin (to get more info)
 |git pull (If other team members are working on your repository, you 
