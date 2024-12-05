@@ -39,6 +39,8 @@ conda install -c conda-forge tensorflow=2.12 cudatoolkit=11.8 cudnn=8.8
 conda uninstall tensorflow tensorflow-gpu
 pip uninstall tensorflow tensorflow-gpu
 
+# Restart Kernel to see update
+
 # Install the appropriate version for CUDA 12.2
 conda install -c conda-forge tensorflow=2.12 cudatoolkit=11.8 cudnn=8.8
 
