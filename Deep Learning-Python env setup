@@ -41,11 +41,24 @@ pip uninstall tensorflow tensorflow-gpu
 
 # Restart Kernel to see update
 
+update----tf
 # Install the appropriate version for CUDA 12.2
 conda install -c conda-forge tensorflow=2.12 cudatoolkit=11.8 cudnn=8.8
 
 # 2 Install tensorflow and keras
 conda install tensorflow-gpu keras -c conda-forge
+
+or---- use last working tf
+pip install tensorflow==2.6.2
+pip install tensorflow-addons==0.14.0
+pip install tensorflow-datasets==4.5.2
+pip install tensorflow-estimator==2.6.0
+pip install tensorflow-hub==0.16.0
+pip install tensorflow-metadata==1.2.0
+pip install tensorflow-model-optimization==0.7.3
+pip install tensorflow-text==2.6.0
+# Install CUDA toolkit and cuDNN compatible with TF 2.6.2
+conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1
 
 # Install PyTorch (if you want both frameworks)
 conda install pytorch torchvision torchaudio cudatoolkit -c pytorch
