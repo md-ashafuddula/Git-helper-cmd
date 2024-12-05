@@ -60,6 +60,11 @@ pip install tensorflow-text==2.6.0
 # Install CUDA toolkit and cuDNN compatible with TF 2.6.2
 conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1
 
+# Visualize model
+pip install pydot graphviz
+or 
+conda install python-graphviz pydot
+
 # Install PyTorch (if you want both frameworks)
 conda install pytorch torchvision torchaudio cudatoolkit -c pytorch
 
