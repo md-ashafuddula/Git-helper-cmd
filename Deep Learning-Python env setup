@@ -26,10 +26,23 @@ pip install opencv-python-headless
 
 
 --------------------- Deel Learning (New Environment Setup)
+
+I have NVIDIA RTX A4000 GPUs with CUDA 12.2 installed. 
+
+conda deactivate
+conda remove -n tf_env --all  # Remove the existing environment
 conda create -n tf_env python=3.8
 conda activate tf_env
+conda install -c conda-forge tensorflow=2.12 cudatoolkit=11.8 cudnn=8.8
 
-#2 Install tensorflow and keras
+# Remove current tensorflow installations
+conda uninstall tensorflow tensorflow-gpu
+pip uninstall tensorflow tensorflow-gpu
+
+# Install the appropriate version for CUDA 12.2
+conda install -c conda-forge tensorflow=2.12 cudatoolkit=11.8 cudnn=8.8
+
+# 2 Install tensorflow and keras
 conda install tensorflow-gpu keras -c conda-forge
 
 # Install PyTorch (if you want both frameworks)
@@ -38,7 +51,7 @@ conda install pytorch torchvision torchaudio cudatoolkit -c pytorch
 # Install essential scientific computing packages
 conda install numpy pandas scipy scikit-learn matplotlib seaborn
 
-#3 Install Jupyter and visualization tools
+# 3 Install Jupyter and visualization tools
 conda install -c conda-forge jupyter notebook
 conda install jupyter notebook
 conda install -c conda-forge matplotlib seaborn plotly
