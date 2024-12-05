@@ -121,6 +121,8 @@ jupyter labextension install @jupyter-widgets/jupyterlab-manager
 conda install -c conda-forge pandas-profiling
 conda install -c conda-forge opencv pillow
 
+pip install pydicom
+
 # Install progress bars and utilities
 conda install tqdm ipywidgets
 
