@@ -1,0 +1,87 @@
+# DL, ML environment
+
+# Create new environment with Python 3.9
+conda create -n nnj_env python=3.9
+conda activate nnj_env
+
+# Add necessary channels
+conda config --add channels conda-forge
+conda config --add channels pytorch
+conda config --set channel_priority flexible
+
+# Install CUDA toolkit and cuDNN
+conda install -c conda-forge cudatoolkit=11.8 cudnn=8.4
+
+# Install PyTorch with CUDA support
+conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+
+# Install TensorFlow (compatible with CUDA 11.8)
+conda install -c conda-forge tensorflow=2.10.0
+
+# Install Jupyter and other packages
+conda install -c conda-forge jupyterlab notebook ipywidgets
+conda install -c conda-forge scikit-learn pandas numpy scipy matplotlib seaborn psutil mayavi
+conda install -c conda-forge plotly bokeh holoviews
+conda install -c conda-forge opencv pillow tqdm h5py
+
+conda install -c conda-forge pandas=2.1.0 # Install newer pandas first conda install -c conda-forge dask # Then install dask conda install -c conda-forge datashader # Then install datashader
+
+pip install panel hvplot pydicom
+
+#5 Install Jupyter extensions
+conda install -c conda-forge jupyter_contrib_nbextensions
+jupyter contrib nbextension install --user
+
+#4 Install data processing utilities
+conda install -c conda-forge pandas-profiling
+conda install -c conda-forge opencv pillow
+
+—————
+# Create new environment with Python 3.9
+conda create -n dl_env python=3.9
+conda activate dl_env
+
+# Install CUDA and cuDNN
+# conda install -c nvidia cuda-toolkit=12.2
+# conda install -c nvidia cudnn=8.9.2
+
+# Install PyTorch with CUDA 12.2 support
+# conda install pytorch torchvision torchaudio pytorch-cuda=12.2 -c pytorch -c nvidia
+
+# Install TensorFlow and related packages
+# conda install -c conda-forge tensorflow=2.12.0
+# conda install -c conda-forge tensorflow-hub
+# conda install -c conda-forge tensorflow-datasets
+
+# Install Jupyter environments
+# conda install -c conda-forge jupyterlab=4.0.7
+# conda install -c conda-forge notebook=7.0.6
+# conda install -c conda-forge ipywidgets=8.1.1
+# conda install -c conda-forge jupyterlab-widgets=3.0.9
+
+# Install common ML/DL libraries
+# conda install -c conda-forge scikit-learn=1.3.2
+# conda install -c conda-forge pandas=2.1.3
+# conda install -c conda-forge numpy=1.24.3
+# conda install -c conda-forge scipy=1.11.3
+# conda install -c conda-forge matplotlib=3.8.2
+# conda install -c conda-forge seaborn=0.13.0
+
+# Install visualization tools
+# conda install -c conda-forge plotly=5.18.0
+# conda install -c conda-forge bokeh=3.3.1
+# conda install -c conda-forge holoviews=1.18.1
+conda install -c conda-forge graphviz=8.1.0
+conda install -c conda-forge pydot=1.4.2
+
+# Install additional useful packages
+# conda install -c conda-forge opencv=4.8.1
+# conda install -c conda-forge pillow=10.1.0
+# conda install -c conda-forge tqdm=4.66.1
+# conda install -c conda-forge h5py=3.10.0
+# conda install -c conda-forge pandas-profiling=3.6.6
+conda install -c conda-forge scikit-image=0.22.0
+
+# Install deep learning visualization tools
+conda install -c conda-forge tensorboard=2.12.3
+conda install -c conda-forge keras-visualizer=3.1.2
