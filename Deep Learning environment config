@@ -1,3 +1,6 @@
+conda remove --name mrnet_env --all
+conda rename -n mrnet_env_new mrnet_env
+
 # DL, ML environment
 
 # Create new environment with Python 3.9
