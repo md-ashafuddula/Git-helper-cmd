@@ -30,7 +30,7 @@ conda install -c conda-forge scikit-learn pandas numpy scipy matplotlib seaborn 
 conda install -c conda-forge plotly bokeh holoviews
 conda install -c conda-forge opencv pillow tqdm h5py
 
-conda install -c conda-forge pandas=2.1.0 # Install newer pandas first conda install -c conda-forge dask # Then install dask conda install -c conda-forge datashader # Then install datashader
+# conda install -c conda-forge pandas=2.1.0 # Install newer pandas first conda install -c conda-forge dask # Then install dask conda install -c conda-forge datashader # Then install datashader
 
 pip install panel hvplot pydicom
 
