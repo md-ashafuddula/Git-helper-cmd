@@ -115,5 +115,17 @@ conda install -c conda-forge tensorboard=2.12.3
 pip install keras-visualizer==3.1.2
 pip install keras-visualizer # for latest version
 
+
+# Set env path
+nano ~/.bashrc
+# CUDA and TensorFlow configuration
+export LD_LIBRARY_PATH=/usr/lib/cuda/lib64:$LD_LIBRARY_PATH
+export CUDA_HOME=/usr/lib/cuda
+export XLA_FLAGS=--xla_gpu_cuda_data_dir=/usr/lib/cuda
+
+Save (Ctrl + O, then Enter) and exit (Ctrl + X)
+
+source ~/.bashrc # Source your .bashrc
+
 conda search -c conda-forge cudnn
 pip index versions nvidia-cudnn-cu11
