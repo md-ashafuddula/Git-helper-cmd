@@ -13,6 +13,9 @@ conda config --add channels conda-forge
 conda config --add channels pytorch
 conda config --set channel_priority flexible
 
+--if needed upgrade pip
+pip install --upgrade pip
+
 [1]
 # Install CUDA toolkit and cuDNN
 conda install -c conda-forge cudatoolkit=11.8 
@@ -60,6 +63,8 @@ pip install jupyter_nbextensions_configurator
 # Enable the extensions
 jupyter contrib nbextension install --user
 jupyter nbextensions_configurator enable --user
+# Enable widgets in Jupyter
+jupyter nbextension enable --py widgetsnbextension
 
 #4 Install data processing utilities
 conda install -c conda-forge pandas-profiling
@@ -102,6 +107,8 @@ conda activate dl_env
 # conda install -c conda-forge holoviews=1.18.1
 conda install -c conda-forge graphviz=8.1.0
 conda install -c conda-forge pydot=1.4.2
+# Then install vtk
+conda install -c anaconda vtk
 
 # Install additional useful packages
 # conda install -c conda-forge opencv=4.8.1
@@ -130,3 +137,14 @@ source ~/.bashrc # Source your .bashrc
 
 conda search -c conda-forge cudnn
 pip index versions nvidia-cudnn-cu11
+
+
+# Create a jupyter kernel for your environment
+python -m ipykernel install --user --name deeplearn --display-name "Python (deeplearn)"
+
+# Create requirements file
+pip freeze > requirements.txt 
+conda env export > environment.yml
+
+--install from requirements file
+pip install -r requirements.txt
