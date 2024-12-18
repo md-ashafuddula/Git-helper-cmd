@@ -29,8 +29,9 @@ pip cache purge
 # Install TensorFlow 2.12.0 which is compatible with cuDNN 8.4.1
 pip install tensorflow==2.12.0
 pip install nvidia-cudnn-cu11==8.4.1.50
+
 # Install cuDNN 8.6.0.163 which is compatible with TensorFlow 2.14.1
-pip install nvidia-cudnn-cu11==8.6.0.163
+pip install nvidia-cudnn-cu11==8.6.0.163 # working in tf_env
 pip install tensorflow==2.14.1
 
 # Install PyTorch with CUDA support
@@ -53,7 +54,7 @@ conda install -c conda-forge opencv pillow tqdm h5py
 pip install panel hvplot pydicom
 
 #5 Install Jupyter extensions
-pip install notebook==6.5.5
+# pip install notebook==6.5.5
 pip install jupyter_contrib_nbextensions
 pip install jupyter_nbextensions_configurator
 # Enable the extensions
