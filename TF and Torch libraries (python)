@@ -142,7 +142,10 @@ conda create -n pyt_env python=3.9
 conda activate pyt_env
 
 # Install PyTorch and CUDA
-conda install pytorch torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
+conda install -c pytorch -c nvidia # pytorch-cuda=12.1
+
+# Uninstall current PyTorch completely
+# pip uninstall -y torch torchvision torchaudio
 
 conda config --add channels conda-forge
 conda config --add channels pytorch
@@ -161,8 +164,8 @@ conda install -c conda-forge tensorboard=2.12.3
 conda install -c conda-forge mayavi
 
 # Install Jupyter and related tools using pip
-pip install torchvision==0.17.0
-pip install numpy==1.24.3
+pip install numpy==1.23.5
+pip install torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu124  # PyTorch, torchvision, and torchaudio
 pip install jupyter notebook jupyterlab ipywidgets jupyterlab-widgets
 pip install opencv-python
 pip install einops
