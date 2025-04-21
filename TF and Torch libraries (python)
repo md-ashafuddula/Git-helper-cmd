@@ -125,6 +125,55 @@ pip install keras-visualizer==3.1.2
 pip install keras-visualizer # for latest version
 
 
+# Pytorch Environment
+
+=============================================================
+
+# Remove existing environment if needed
+conda env remove -n pyt_env
+
+# Clean conda cache
+conda clean --all --yes
+
+# Create new environment
+conda create -n pyt_env python=3.9
+conda activate pyt_env
+
+# Install PyTorch and CUDA
+conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
+
+conda config --add channels conda-forge
+conda config --add channels pytorch
+conda config --set channel_priority flexible
+
+# Install data science and visualization packages
+conda install -c conda-forge scikit-learn pandas numpy scipy matplotlib seaborn psutil
+conda install -c conda-forge plotly bokeh holoviews
+conda install -c conda-forge opencv pillow tqdm h5py
+conda install -c conda-forge pandas-profiling
+conda install -c conda-forge graphviz=8.1.0
+conda install -c conda-forge pydot=1.4.2
+conda install -c anaconda vtk
+conda install -c conda-forge scikit-image=0.22.0
+conda install -c conda-forge tensorboard=2.12.3
+conda install -c conda-forge mayavi
+
+# Install Jupyter and related tools using pip
+pip install jupyter notebook jupyterlab ipywidgets jupyterlab-widgets
+pip install opencv-python
+pip install einops
+pip install panel hvplot pydicom
+pip install jupyter_contrib_nbextensions
+pip install jupyter_nbextensions_configurator
+pip install keras-visualizer==3.1.2
+pip install keras-visualizer  # for latest version
+
+# Set up Jupyter extensions
+jupyter contrib nbextension install --user
+jupyter nbextensions_configurator enable --user
+jupyter nbextension enable --py widgetsnbextension
+=============================================================
+
 # Set env path
 nano ~/.bashrc
 # CUDA and TensorFlow configuration
