@@ -50,6 +50,7 @@ pip install jupyter notebook jupyterlab ipywidgets jupyterlab-widgets
 # conda install -c conda-forge ipywidgets
 conda install -c conda-forge scikit-learn pandas numpy scipy matplotlib seaborn psutil mayavi
 conda install -c conda-forge plotly bokeh holoviews
+pip install opencv-python
 conda install -c conda-forge opencv pillow tqdm h5py
 
 # conda install -c conda-forge pandas=2.1.0 # Install newer pandas first conda install -c conda-forge dask # Then install dask conda install -c conda-forge datashader # Then install datashader
