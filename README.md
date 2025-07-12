@@ -11,6 +11,13 @@
 
 ```git config --list --show-origin``` ***to see where that setting is defined (global, user, repo, etc...)***
 
+## To login instead of pass use token
+
+Option 1: Use Personal Access Token (HTTPS Method)
+Go to: https://github.com/settings/tokens
+Click: Generate new token (classic)
+Select scopes: ✅ repo
+Copy the token
 
 ## Git initiation & basics
 
